@@ -21,3 +21,9 @@
 2023-08-26 03:43:14.845 [info] [127.0.0.1][e2547dfa][ManagementConnection] New connection established.
 2023-08-26 03:43:17.800 [info] [127.0.0.1][5cc28923][ExtensionHostConnection] New connection established.
 2023-08-26 03:43:18.491 [info] [127.0.0.1][5cc28923][ExtensionHostConnection] <984> Launched Extension Host Process.
+2023-08-26 03:44:58.070 [info] [127.0.0.1][5cc28923][ExtensionHostConnection] <984> Starting WebSocket: RAW/api/kernels/ba8310a4-29cb-4248-b139-278647583aab
+
+2023-08-26 03:44:58.272 [info] [127.0.0.1][5cc28923][ExtensionHostConnection] <984> Kernel: starting (ba8310a4-29cb-4248-b139-278647583aab)
+
+2023-08-26 03:57:39.726 [info] [127.0.0.1][5cc28923][ExtensionHostConnection] <984> Starting WebSocket: RAW/api/kernels/9d74a3b1-70c3-43e2-b938-56f8ad9e86cb
+
