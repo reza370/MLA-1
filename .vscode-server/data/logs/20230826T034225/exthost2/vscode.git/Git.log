@@ -19,3 +19,5 @@ Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
 2023-08-26 04:00:29.118 [info] fatal: not a git repository (or any of the parent directories): .git
 2023-08-26 04:05:57.903 [info] > git rev-parse --show-toplevel [26ms]
 2023-08-26 04:05:57.904 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-08-26 04:07:02.947 [info] > git rev-parse --show-toplevel [2ms]
+2023-08-26 04:07:02.948 [info] fatal: not a git repository (or any of the parent directories): .git
