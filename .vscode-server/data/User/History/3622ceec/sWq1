@@ -1,0 +1,11 @@
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[user]
+		name = reza370
+	email = reza37095@gmail.com
+[credential]
+	helper = "!f() { /root/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/node /tmp/vscode-remote-containers-7e48ee7b-b525-4d75-87e5-abedd3160e37.js git-credential-helper $*; }; f"
+    
