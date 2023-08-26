@@ -1,0 +1,64 @@
+{
+	"name": "csv-editor",
+	"displayName": "Simple CSV editor",
+	"description": "edit large CSV easily",
+	"version": "0.2.2",
+	"publisher": "estivo",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Estivoo/csv-editor"
+	},
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.35.0"
+	},
+	"bugs": {
+		"url": "https://github.com/Estivoo/csv-editor/issues"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"CSV"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "csvEditor.show",
+				"title": "Simple CSV Editor"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^10.12.21",
+		"tslint": "^5.18.0",
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28"
+	},
+	"dependencies": {
+		"csv-parse": "^4.4.6",
+		"csv-stringify": "^5.3.0"
+	},
+	"__metadata": {
+		"id": "c45092ea-e4ed-4b03-81b4-4ba9d034c489",
+		"publisherId": "36f54419-7ff1-4599-8ebd-00d8e981fb1d",
+		"publisherDisplayName": "estivo",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1693044448929,
+		"preRelease": false
+	}
+}
