@@ -1,0 +1,102 @@
+{
+  "fields": [
+    {
+      "name": "filename",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "language",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "JSON",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "Ignore",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "JSON with Comments",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "JavaScript",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "CSV",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "HTML",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "OJS",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "YAML",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "XML",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "TypeScript",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "pip requirements",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "Markdown",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "CSS",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "Arrow",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "comment",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "blank",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "format": "default"
+    }
+  ],
+  "missingValues": [
+    ""
+  ]
+}

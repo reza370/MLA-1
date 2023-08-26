@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+		<Metadata>
+			<Identity Language="en-US" Id="vscode-data-table" Version="1.12.0" Publisher="RandomFractalsInc" />
+			<DisplayName>Data Table Renderers</DisplayName>
+			<Description xml:space="preserve">Data Table 🈸, Flat Data Grid 中 &amp; Data Summary 🈷️ Renderers for VSCode Notebook 📓 Cell ⌗ Data Outputs</Description>
+			<Tags>data,dataViz,data summary,data viewer,flat data grid,geo data,GeoJSON,JSON,CSV,XML,text,table,view,.NET Interactive,REST Book,TypeScript,Pyolite,Pyodide,Node.js,notebook,notebookRenderer,cell,output,renderer,examples,__web_extension,__sponsor_extension</Tags>
+			<Categories>Data Science,Education,Formatters,Machine Learning,Notebooks,Visualization</Categories>
+			<GalleryFlags>Public</GalleryFlags>
+			
+			<Properties>
+				<Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.68.0" />
+				<Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="" />
+				<Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="" />
+				<Property Id="Microsoft.VisualStudio.Code.ExtensionKind" Value="workspace,web" />
+				<Property Id="Microsoft.VisualStudio.Code.LocalizedLanguages" Value="" />
+				
+				<Property Id="Microsoft.VisualStudio.Code.SponsorLink" Value="https://github.com/sponsors/RandomFractals" />
+				<Property Id="Microsoft.VisualStudio.Services.Links.Source" Value="https://github.com/RandomFractals/vscode-data-table.git" />
+				<Property Id="Microsoft.VisualStudio.Services.Links.Getstarted" Value="https://github.com/RandomFractals/vscode-data-table.git" />
+				<Property Id="Microsoft.VisualStudio.Services.Links.GitHub" Value="https://github.com/RandomFractals/vscode-data-table.git" />
+				<Property Id="Microsoft.VisualStudio.Services.Links.Support" Value="https://github.com/RandomFractals/vscode-data-table/issues" />
+				<Property Id="Microsoft.VisualStudio.Services.Links.Learn" Value="https://github.com/RandomFractals/vscode-data-table/README.md" />
+				<Property Id="Microsoft.VisualStudio.Services.Branding.Color" Value="#333" />
+				<Property Id="Microsoft.VisualStudio.Services.Branding.Theme" Value="dark" />
+				<Property Id="Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown" Value="true" />
+				
+				
+			</Properties>
+			<License>extension/LICENSE.txt</License>
+			<Icon>extension/resources/images/data-table.png</Icon>
+		</Metadata>
+		<Installation>
+			<InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+		</Installation>
+		<Dependencies/>
+		<Assets>
+			<Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+			<Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" />
+<Asset Type="Microsoft.VisualStudio.Services.Content.Changelog" Path="extension/CHANGELOG.md" Addressable="true" />
+<Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="extension/LICENSE.txt" Addressable="true" />
+<Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/resources/images/data-table.png" Addressable="true" />
+		</Assets>
+	</PackageManifest>

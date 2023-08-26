@@ -1,0 +1,37 @@
+{
+  "views": {
+    "Datagrid": {
+      "plugin": "Datagrid",
+      "plugin_config": {},
+      "settings": false,
+      "row_pivots": [],
+      "column_pivots": [],
+      "columns": [
+        "filename",
+        " \"language\"",
+        " \"JSON\"",
+        " \"Ignore\"",
+        " \"JSON with Comments\"",
+        " \"JavaScript\"",
+        " \"CSV\"",
+        " \"HTML\"",
+        " \"OJS\"",
+        " \"YAML\"",
+        " \"XML\"",
+        " \"TypeScript\"",
+        " \"pip requirements\"",
+        " \"Markdown\"",
+        " \"CSS\"",
+        " \"Arrow\"",
+        " \"comment\"",
+        " \"blank\"",
+        " \"total\""
+      ],
+      "filter": [],
+      "sort": [],
+      "expressions": [],
+      "aggregates": {}
+    }
+  },
+  "view": "Datagrid"
+}

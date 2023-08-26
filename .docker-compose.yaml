@@ -1,0 +1,10 @@
+version: '3'
+services:
+  dev:
+    image: mla-1:latest
+    build:
+     context: .
+     dockerfile: .dockerfile
+    volumes:
+      - ./source_code:/root/code
+      - ./.vscode-server:/root/.vscode-server

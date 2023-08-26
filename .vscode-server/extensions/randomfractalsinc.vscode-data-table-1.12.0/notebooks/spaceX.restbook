@@ -1,0 +1,1 @@
+[{"kind":2,"language":"rest-book","value":"GET https://api.spacexdata.com/v5/launches/latest","outputs":[{"mime":"application/vnd.code.notebook.error","value":{"name":"Error","message":"certificate has expired"}}]}]

@@ -1,0 +1,204 @@
+{
+	"name": "vscode-data-table",
+	"displayName": "Data Table Renderers",
+	"description": "Data Table 🈸, Flat Data Grid 中 & Data Summary 🈷️ Renderers for VSCode Notebook 📓 Cell ⌗ Data Outputs",
+	"version": "1.12.0",
+	"engines": {
+		"node": ">16.5.0",
+		"vscode": "^1.68.0"
+	},
+	"icon": "resources/images/data-table.png",
+	"publisher": "RandomFractalsInc",
+	"author": "Taras Novak",
+	"contributors": [
+		"Taras Novak @RandomFractals",
+		"Alexander @usernamehw"
+	],
+	"license": "Apache-2.0",
+	"readme": "README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/RandomFractals/vscode-data-table"
+	},
+	"bugs": "https://github.com/RandomFractals/vscode-data-table/issues",
+	"homepage": "https://github.com/RandomFractals/vscode-data-table/README.md",
+	"sponsor": {
+		"url": "https://github.com/sponsors/RandomFractals"
+	},
+	"galleryBanner": {
+		"color": "#333",
+		"theme": "dark"
+	},
+	"categories": [
+		"Data Science",
+		"Education",
+		"Formatters",
+		"Machine Learning",
+		"Notebooks",
+		"Visualization"
+	],
+	"keywords": [
+		"data",
+		"dataViz",
+		"data summary",
+		"data viewer",
+		"flat data grid",
+		"geo data",
+		"GeoJSON",
+		"JSON",
+		"CSV",
+		"XML",
+		"text",
+		"table",
+		"view",
+		".NET Interactive",
+		"REST Book",
+		"TypeScript",
+		"Pyolite",
+		"Pyodide",
+		"Node.js",
+		"notebook",
+		"notebookRenderer",
+		"cell",
+		"output",
+		"renderer",
+		"examples"
+	],
+	"activationEvents": [
+		"workspaceContains:**/*.ipynb",
+		"workspaceContains:**/*.xbook",
+		"workspaceContains:**/*.restbook",
+		"onCommand:data.table.notebook.examples",
+		"onRenderer:vscode-data-table",
+		"onRenderer:vscode-data-summary",
+		"onRenderer:flat-data-grid"
+	],
+	"main": "./out/extension/extension.js",
+	"browser": "./out/extension/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "data.table.notebook.examples",
+				"title": "Notebook Examples",
+				"category": "Data Table",
+				"icon": "$(notebook)"
+			}
+		],
+		"notebookRenderer": [
+			{
+				"id": "vscode-data-table",
+				"entrypoint": "./out/renderer/dataTable.js",
+				"displayName": "Data Table",
+				"mimeTypes": [
+					"application/json",
+					"application/geo+json",
+					"application/octet-stream",
+					"application/vnd.code.notebook.stdout",
+					"application/xml",
+					"text/csv",
+					"text/plain",
+					"text/x-json",
+					"text/xml"
+				]
+			},
+			{
+				"id": "vscode-data-summary",
+				"entrypoint": "./out/renderer/dataSummary.js",
+				"displayName": "Data Summary",
+				"mimeTypes": [
+					"application/json",
+					"application/geo+json",
+					"application/octet-stream",
+					"application/vnd.code.notebook.stdout",
+					"application/xml",
+					"text/csv",
+					"text/plain",
+					"text/x-json",
+					"text/xml"
+				]
+			},
+			{
+				"id": "flat-data-grid",
+				"entrypoint": "./out/renderer/flatDataGrid.js",
+				"displayName": "Flat Data Grid",
+				"mimeTypes": [
+					"application/json",
+					"application/geo+json",
+					"application/octet-stream",
+					"application/vnd.code.notebook.stdout",
+					"application/xml",
+					"text/csv",
+					"text/plain",
+					"text/x-json",
+					"text/xml"
+				]
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run build && node out/test/checkNoTestProvider.js",
+		"compile": "npm run compile:extension && npm run compile:renderer",
+		"compile:extension": "tsc -p src/extension",
+		"compile:renderer": "webpack --config=./webpack.config.js",
+		"build": "npm run build:renderer && npm run build:extension",
+		"build:renderer": "webpack --config=./webpack.config.js --mode=production",
+		"build:extension": "webpack --config=./webpack.extension.config.js --mode=production",
+		"lint": "eslint src --ext ts",
+		"watch": "concurrently -r \"npm:watch:*\"",
+		"watch:extension": "tsc -watch -p ./",
+		"watch:renderer": "webpack --mode development --watch",
+		"dev": "concurrently -r npm:watch:extension npm:watch:renderer",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js",
+		"test:web": "npx @vscode/test-web --extensionDevelopmentPath=. --extensionPath=."
+	},
+	"devDependencies": {
+		"@babel/core": "^7.18.13",
+		"@types/d3-dsv": "^3.0.0",
+		"@types/glob": "^8.0.0",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "^16.5.0",
+		"@types/react-dom": "^17.0.02",
+		"@types/vscode": "^1.68.0",
+		"@types/vscode-notebook-renderer": "^1.60.0",
+		"@types/webpack-env": "^1.18.0",
+		"@typescript-eslint/eslint-plugin": "^5.36.1",
+		"@typescript-eslint/parser": "^5.36.1",
+		"browserslist": "^4.21.3",
+		"concurrently": "^7.3.0",
+		"css-loader": "^6.7.1",
+		"eslint": "^8.23.0",
+		"glob": "^7.2.0",
+		"mocha": "^10.0.0",
+		"style-loader": "^3.3.1",
+		"ts-loader": "^9.3.1",
+		"typescript": "^4.8.2",
+		"vscode-notebook-error-overlay": "^1.0.1",
+		"vscode-test": "^1.6.1",
+		"webpack": "^5.74.0",
+		"webpack-cli": "^4.10.0"
+	},
+	"dependencies": {
+		"@observablehq/inputs": "^0.10.4",
+		"@observablehq/plot": "^0.4.3",
+		"apache-arrow": "^9.0.0",
+		"arquero": "^5.1.0",
+		"d3": "^7.6.1",
+		"d3-dsv": "^3.0.1",
+		"htl": "^0.3.1",
+		"fast-xml-parser": "^4.0.9",
+		"@githubocto/flat-ui": "^0.14.1",
+		"react": "^17.0.02",
+		"react-dom": "^17.0.02"
+	},
+	"__metadata": {
+		"id": "26f7ec9c-f740-4bb2-b43e-a5a2aed6f94e",
+		"publisherId": "c0235960-79cc-476e-be8e-a16e4fc76b9a",
+		"publisherDisplayName": "Random Fractals Inc.",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1692720545343,
+		"preRelease": false
+	}
+}

@@ -1,0 +1,16 @@
+2023-08-26 02:42:03.767 [info] Experiment 'pythonPromptNewFormatterExt' is active
+2023-08-26 02:42:03.769 [info] Experiment 'pythonPromptNewToolsExt' is active
+2023-08-26 02:42:03.771 [info] Test server listening.
+2023-08-26 02:42:03.772 [info] > conda info --json
+2023-08-26 02:42:03.773 [info] Python interpreter path: /usr/local/bin/python
+2023-08-26 02:42:11.734 [info] Found: /bin/python3 --> /bin/python3.11
+2023-08-26 02:42:11.763 [info] Found: /bin/python3.11 --> /bin/python3.11
+2023-08-26 02:42:11.919 [info] Found: /usr/bin/python3 --> /usr/bin/python3.11
+2023-08-26 02:42:11.921 [info] Found: /usr/bin/python3.11 --> /usr/bin/python3.11
+2023-08-26 02:42:11.973 [info] Found: /usr/local/bin/python --> /usr/local/bin/python3.11
+2023-08-26 02:42:11.977 [info] Found: /usr/local/bin/python3 --> /usr/local/bin/python3.11
+2023-08-26 02:42:11.979 [info] Found: /usr/local/bin/python3.11 --> /usr/local/bin/python3.11
+2023-08-26 02:42:12.084 [info] > /bin/python3 -I ./.vscode-server/extensions/ms-python.python-2023.14.0/pythonFiles/get_output_via_markers.py ./.vscode-server/extensions/ms-python.python-2023.14.0/pythonFiles/interpreterInfo.py
+2023-08-26 02:42:12.142 [info] > /usr/bin/python3 -I ./.vscode-server/extensions/ms-python.python-2023.14.0/pythonFiles/get_output_via_markers.py ./.vscode-server/extensions/ms-python.python-2023.14.0/pythonFiles/interpreterInfo.py
+2023-08-26 02:42:12.729 [info] > /usr/local/bin/python -I ./.vscode-server/extensions/ms-python.python-2023.14.0/pythonFiles/get_output_via_markers.py ./.vscode-server/extensions/ms-python.python-2023.14.0/pythonFiles/interpreterInfo.py
+2023-08-26 02:42:56.504 [info] Starting Jedi language server for root.

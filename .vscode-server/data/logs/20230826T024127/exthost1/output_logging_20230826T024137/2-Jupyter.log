@@ -1,0 +1,73 @@
+Visual Studio Code (1.81.1, attached-container, desktop)
+Jupyter Extension Version: 2023.7.1002162226.
+Python Extension Version: 2023.14.0.
+Platform: linux (x64).
+Workspace folder /root, Home = /root
+02:41:58.905 [info] User belongs to experiment group 'FastKernelPicker'
+02:41:58.906 [info] User belongs to experiment group 'NewRemoteUriStorage'
+02:41:58.906 [info] User belongs to experiment group 'PasswordManager'
+02:41:58.906 [info] User belongs to experiment group 'NewJupyterSession'
+02:42:01.047 [info] Start refreshing Kernel Picker (1693017721047)
+02:42:01.061 [info] Using Pylance
+02:42:04.236 [info] Starting Kernel startUsingPythonInterpreter, .jvsc74a57bd0949777d72b0d2535278d3dc13498b2535136f6dfe0678499012e853ee9abcab1./usr/local/python./usr/local/python.-m#ipykernel_launcher  (Python Path: /usr/local/bin/python, Unknown, 3.11.4) for '~/code/test111111.ipynb' (disableUI=true)
+02:42:04.584 [warn] Failed to get activated env vars for /usr/local/bin/python in 967ms
+02:42:04.934 [info] Process Execution: /usr/local/bin/python -c "import site;print("USER_BASE_VALUE");print(site.USER_BASE);print("USER_BASE_VALUE");"
+02:42:05.092 [info] End refreshing Kernel Picker (1693017721047)
+02:42:05.127 [info] Process Execution: /usr/local/bin/python -m pip list
+02:42:05.230 [warn] Failed to get activated env vars for /usr/local/bin/python in 499ms
+02:42:05.261 [info] Process Execution: /usr/local/bin/python -c "import ipykernel; print(ipykernel.__version__); print("5dc3a68c-e34e-4080-9c3e-2a532b2ccb4d"); print(ipykernel.__file__)"
+02:42:05.292 [info] Process Execution: /usr/local/bin/python -m ipykernel_launcher --ip=127.0.0.1 --stdin=9003 --control=9001 --hb=9000 --Session.signature_scheme="hmac-sha256" --Session.key=b"4ee1562b-7f44-4784-a703-b630b25f22c2" --shell=9002 --transport="tcp" --iopub=9004 --f=~/.local/share/jupyter/runtime/kernel-v2-235EGO27pBFybl0.json
+    > cwd: ~/code
+02:42:07.062 [info] ipykernel version & path 6.25.1, /usr/local/lib/python3.11/site-packages/ipykernel/__init__.py for /usr/local/bin/python
+02:42:10.308 [warn] StdErr from Kernel Process 0.01s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+02:42:10.911 [warn] StdErr from Kernel Process /usr/local/lib/python3.11/site-packages/traitlets/traitlets.py:2548: FutureWarning: Supporting extra quotes around strings is deprecated in traitlets 5.0. You can use 'hmac-sha256' instead of '"hmac-sha256"' if you require traitlets >=5.
+  warn(
+02:42:10.917 [warn] StdErr from Kernel Process /usr/local/lib/python3.11/site-packages/traitlets/traitlets.py:2499: FutureWarning: Supporting extra quotes around Bytes is deprecated in traitlets 5.0. Use '4ee1562b-7f44-4784-a703-b630b25f22c2' instead of 'b"4ee1562b-7f44-4784-a703-b630b25f22c2"'.
+  warn(
+02:42:11.483 [info] Started Kernel Python 3.11.4 (pid: 599)
+02:42:11.484 [info] Started new session fe974473-f86b-4b90-824c-c41ca2fd2dad
+02:42:11.602 [info] Start refreshing Interpreter Kernel Picker
+02:42:11.603 [info] Start refreshing Kernel Picker (1693017731603)
+02:42:14.202 [info] End refreshing Kernel Picker (1693017731603)
+02:42:22.506 [info] Process Execution: /usr/local/bin/python ~/.vscode-server/extensions/ms-toolsai.jupyter-2023.7.1002162226/pythonFiles/printJupyterDataDir.py
+02:47:29.074 [info] Handle Execution of Cells 1 for ~/code/test111111.ipynb
+02:47:29.103 [info] Kernel acknowledged execution of cell 1 @ 1693018049092
+02:47:30.147 [info] End cell 1 execution @ 1693018050142, started @ 1693018049092, elapsed time = 1.05s
+02:49:48.495 [info] Handle Execution of Cells 0 for ~/code/maincodes.ipynb
+02:49:48.504 [info] Starting Kernel startUsingPythonInterpreter, .jvsc74a57bd0949777d72b0d2535278d3dc13498b2535136f6dfe0678499012e853ee9abcab1./usr/local/python./usr/local/python.-m#ipykernel_launcher  (Python Path: /usr/local/bin/python, Unknown, 3.11.4) for '~/code/maincodes.ipynb' (disableUI=false)
+02:49:48.638 [warn] Failed to get activated env vars for /usr/local/bin/python in 119ms
+02:49:48.649 [info] Process Execution: /usr/local/bin/python -m pip list
+02:49:48.670 [warn] Failed to get activated env vars for /usr/local/bin/python in 147ms
+02:49:48.680 [info] Process Execution: /usr/local/bin/python -c "import ipykernel; print(ipykernel.__version__); print("5dc3a68c-e34e-4080-9c3e-2a532b2ccb4d"); print(ipykernel.__file__)"
+02:49:48.691 [info] Process Execution: /usr/local/bin/python -m ipykernel_launcher --ip=127.0.0.1 --stdin=9008 --control=9006 --hb=9005 --Session.signature_scheme="hmac-sha256" --Session.key=b"1da089e1-ce5f-492b-aede-cdab0ee7cc22" --shell=9007 --transport="tcp" --iopub=9009 --f=~/.local/share/jupyter/runtime/kernel-v2-2359HCUSqVjI0us.json
+    > cwd: ~/code
+02:49:49.462 [info] ipykernel version & path 6.25.1, /usr/local/lib/python3.11/site-packages/ipykernel/__init__.py for /usr/local/bin/python
+02:49:50.208 [warn] StdErr from Kernel Process 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+02:49:50.350 [warn] StdErr from Kernel Process /usr/local/lib/python3.11/site-packages/traitlets/traitlets.py:2548: FutureWarning: Supporting extra quotes around strings is deprecated in traitlets 5.0. You can use 'hmac-sha256' instead of '"hmac-sha256"' if you require traitlets >=5.
+  warn(
+02:49:50.351 [warn] StdErr from Kernel Process /usr/local/lib/python3.11/site-packages/traitlets/traitlets.py:2499: FutureWarning: Supporting extra quotes around Bytes is deprecated in traitlets 5.0. Use '1da089e1-ce5f-492b-aede-cdab0ee7cc22' instead of 'b"1da089e1-ce5f-492b-aede-cdab0ee7cc22"'.
+  warn(
+02:49:50.579 [info] Started Kernel Python 3.11.4 (pid: 3941)
+02:49:50.579 [info] Started new session 67c9a85e-377e-48f6-9091-f3c994618450
+02:49:50.688 [info] Kernel acknowledged execution of cell 0 @ 1693018190678
+02:49:51.349 [info] End cell 0 execution @ 1693018191337, started @ 1693018190678, elapsed time = 0.659s
+02:50:18.096 [info] Handle Execution of Cells 1 for ~/code/maincodes.ipynb
+02:50:18.143 [info] Kernel acknowledged execution of cell 1 @ 1693018218136
+02:50:18.542 [info] End cell 1 execution @ 1693018218537, started @ 1693018218136, elapsed time = 0.401s
+02:50:18.543 [warn] Cancel all remaining cells due to cancellation or failure in execution
+02:50:30.423 [info] Handle Execution of Cells 1 for ~/code/maincodes.ipynb
+02:50:30.454 [info] Kernel acknowledged execution of cell 1 @ 1693018230433
+02:50:30.470 [info] End cell 1 execution @ 1693018230464, started @ 1693018230433, elapsed time = 0.031s
+02:50:30.471 [warn] Cancel all remaining cells due to cancellation or failure in execution
+02:50:42.289 [info] Handle Execution of Cells 1 for ~/code/maincodes.ipynb
+02:50:42.329 [info] Kernel acknowledged execution of cell 1 @ 1693018242304
+02:50:42.341 [info] End cell 1 execution @ 1693018242334, started @ 1693018242304, elapsed time = 0.03s
+02:57:39.926 [info] Handle Execution of Cells 2 for ~/code/maincodes.ipynb
+02:57:39.964 [info] Kernel acknowledged execution of cell 2 @ 1693018659946
+02:57:40.080 [info] End cell 2 execution @ 1693018660070, started @ 1693018659946, elapsed time = 0.124s
