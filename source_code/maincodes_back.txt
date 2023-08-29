@@ -7,7 +7,78 @@
     "ASSIGNMENT NUMBER 1\n",
     "In this assignment, you will solve a problem, i.e., Chaky company makes some car but he has\n",
     "difficulty setting the price for the car. Please make a simple web-based car price prediction system.\n",
-    "**********************************************************************************************"
+    "Note: You are ENCOURAGED to work with your friends, but DISCOURAGED to blindly copy\n",
+    "other’s work. Both parties will be given 0.\n",
+    "Note: Comments should be provided sufficiently so we know you understand. Failure to do so can\n",
+    "raise suspicion of possible copying/plagiarism.\n",
+    "Note: You will be graded upon (1) documentation, (2) experiment, (3) implementation.\n",
+    "Note: This is a two-weeks assignment, but start early.\n",
+    "Deliverables: The GitHub link containing the jupyter notebook, a README.md of the github, and\n",
+    "the folder of your web application called ‘app’.\n",
+    "\n",
+    "***************************************************************************************************\n",
+    "\n",
+    "Task 1. Preparing the datasets\n",
+    "Download the Car Price dataset from Google classroom. \n",
+    "Perform loading, \n",
+    "EDA, \n",
+    "preprocessing,\n",
+    "model selection, · · · , inference.\n",
+    "\n",
+    "There are some important coding considerations:\n",
+    "• For the feature owner, map First owner to 1, ..., Test Drive Car to 5\n",
+    "• For the feature fuel, remove all rows with CNG and LPG because CNG and LPG use a different\n",
+    "mileage system i.e., km/kg which is different from kmfeaturepl for Diesel and Petrol \n",
+    "• For the feature mileage, remove “kmpl” and convert the column to numerical type (e.g., float). Hint: use\n",
+    "df.mileage.str.split\n",
+    "• For the feature engine, remove “CC” and convert the column to numerical type (e.g., float)\n",
+    "• Do the same for max power\n",
+    "• For the feature brand, take only the first word and remove the rest\n",
+    "• Drop the feature torque, simply because Chaky’s company does not understand well about it \n",
+    "• You will found out that Test Drive Cars are ridiculously expensive. Since we do not want to involve\n",
+    "  this, we will simply delete all samples related to it.\n",
+    "• Since selling price is a big number, it can cause your prediction to be very unstable. One trick is\n",
+    "  to first transform the label using log transform, i.e., y = np.log(df['selling_price'])\n",
+    "• During inference/testing, you have to transform your predicted y backed before comparing with y\n",
+    "test, i.e., pred_y = np.exp(pred_y)\n",
+    "\n",
+    "**********************************************************************************************\n",
+    "\n",
+    "Task 2. Report - In the end of the notebook, please write a 2-3 paragraphs summary deeply\n",
+    "discussing and analysing the results. Possible points of discussion:\n",
+    "• Which features are important? Which are not? Why?\n",
+    "• Which algorithm performs well? Which does not? Why? (here, you haven’t learned about any\n",
+    "algorithms yet, but you can search online a bit and start building an intuition)\n",
+    "\n",
+    "**********************************************************************************************\n",
+    "\n",
+    "Task 3. Deployment - Develop a web-based application that contains the model. Here you will be\n",
+    "tasked to self-study how to deploy the model into production. Here are some guidelines: Here you\n",
+    "have multiple options. Those who are veteran web developer may prefer their own web app stack\n",
+    "which is welcomed. For those who are new to this realm, you may consider a simpler/one-stop\n",
+    "solution rather than learning the traditional/flexible approach.\n",
+    "The goal of this task is to expose/deploy our model for public use via the web interface. The main\n",
+    "scenario is the following:\n",
+    "1) Users enter the domain on their browser. They land on your page.\n",
+    "2) (optional) Users may need to navigate to a prediction page.\n",
+    "3) Users read the instruction given on the page that instructs them on how the prediction\n",
+    "works. 4) Users find the input form, put in the appropriate data, and click submit.\n",
+    "5) Note that if users do not have information on certain field, you have to allow users to skip that\n",
+    "field. In that case, we recommend you to fill the missing field with imputation technique you\n",
+    "have learned in the class.\n",
+    "6) A moment later (depending on your model and hardware performance), the result is returned\n",
+    "and printed below the form.\n",
+    "Deploying aside, the app should work on the local environment (your machine) first. I would suggest\n",
+    "you use ‘Dash’ by ‘Plotly’ https://dash.plotly.com/ as a one-stop solution. Spend time studying the\n",
+    "‘Quick Start’ tutorial on the site and also ‘Dash Fundamental’. They are essential for you to know how\n",
+    "‘Dash’ works.\n",
+    "The deliverable for the app would be, in GitHub, you have a folder ‘app’ with ‘.Dockerfile’, ‘docker\n",
+    "compose.yaml’ files, and ‘code’ folder.\n",
+    "Bootstrap: I know Dockerizing the app could be difficult for newcomers, you will get confused when\n",
+    "searching for stuff online, especially, when you just trust ChatGPT to give you the right answer. So, for\n",
+    "those who want to postpone the process of learning “Docker”, here is the Dockerized Dash project\n",
+    "link. Don’t worry, you will eventually need to do this yourself in this shortcoming weeks. You can not\n",
+    "escape this."
    ]
   },
   {
@@ -15,7 +86,7 @@
    "metadata": {},
    "source": [
     "# 1. Loading the data set:\n",
-    "The data set is a CSV file, including 13 columns (attributes or variables) and 8128 rows (samples or records). Data is loaded using the pandas library. In this section, the number of rows, columns, and columns' names is checked after loading the data. This step is crucial because we can see whether a data set is loaded correctly or not. as we can see by the folowing codes, data set is loaded correctly but we need to do some data consideration."
+    "The data set is a CSV file, including 13 columns (attributes or variables) and 8128 rows (samples or records). Data is loaded using the pandas library. In this section, the number of rows, columns, and columns' names is checked after loading the data. This step is crucial because we can see whether a data set is loaded correctly or not."
    ]
   },
   {
@@ -475,10 +546,26 @@
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 8,
    "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "('1.24.4', '1.5.3', '0.12.2', '3.7.2')"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "## summary statistics\n"
+    "import seaborn as sns\n",
+    "import matplotlib.pyplot as plt \n",
+    "import matplotlib\n",
+    "np.__version__, pd.__version__, sns.__version__, matplotlib.__version__"
    ]
   },
   {
@@ -571,13 +658,6 @@
    ],
    "source": [
     "desc_str"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "This dataset contains information on 8028 individual car listings. There are 32 different car names represented, with \"Maruti\" being the most common, appearing 2378 times. The dataset includes two main fuel types, with \"Diesel\" being the most popular, accounting for 4401 entries. The majority of listings (6673) come from individual sellers. The dataset also categorizes cars by their transmission type, with \"Manual\" being the most common at 698 instances. This dataset provides valuable insights into the distribution of car attributes, revealing which car models, fuel types, seller types, and transmission choices are most prevalent within the sample."
    ]
   },
   {
@@ -744,35 +824,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "This dataset contains information about cars' numerous attributes, such as their year of manufacture, selling price, kilometers driven, number of previous owners, mileage, engine capacity, maximum power output, and seating capacity. The data includes 8028 entries. \n",
-    "The log of the average selling price is around 12.98 units (specific unit not mentioned), and the average kilometers driven is approximately 69,773. The cars have had 1.46 previous owners, achieved a mileage of roughly 19.39 kmpl, and have an average engine capacity of approximately 1462.91 cc. The average number of seats in these cars is around 5.42, while the average maximum power output is approximately 91.82 bph.\n",
-    "\n",
-    "Additionally, the data provides insights into the range and distribution of each attribute. For example, the manufacturing year ranges from 1983 to 2020, while the log of selling prices vary between around 10.31 and 16.12. The range of kilometers driven spans from 1000 to 2,360,457, while the number of previous owners ranges from 1 to 4. Mileage varies, with the lowest being 0 (which may indicate missing data) and the highest around 42 kmpl. Engine capacity ranges from 624 cc to 3604 cc, while the maximum power output ranges from 0 to 400 bph. The number of seats varies from 2 to 14. Among all features, km_driven and engine seem to have skewed distribution. We can explore more facts about the features and label by creating useful plots in the following section."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## count plot, distribution plot (histogarm), boxplot, and scatter plot of attributes"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "import seaborn as sns\n",
-    "import matplotlib.pyplot as plt \n",
-    "import matplotlib"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "A horizontal count plot (also known as a bar plot) is generated for each categorical feature to analyze their distribution and detect any anomalies. The information gathered from these plots is similar to that obtained from the summary statistics section for categorical variables. In addition, significant variations in category counts, such as individual vs. dealer and trust maker dealer, manual transmission vs. automatic, and first owner vs. other categories, can indicate that these columns may not be suitable as features due to the high frequency of one category."
+    "Horizental Count Plot (Bar plot) is created for each categorical features to explore their distribution and any unusual values. "
    ]
   },
   {
@@ -959,7 +1011,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The Distribution Plot (Histogram) is a useful tool to observe the distribution of continuous labels and features. It can also help identify deviations from a normal distribution, such as outliers, unusual observations, skewness, or kurtosis. Additionally, these plots can aid in finding the appropriate measure for imputing missing data. However, outlier detection and imputation should be done during the preprocessing phase. The histogram of the label (selling price) shows a relatively symmetric distribution, which is a desirable behavior. However, taking the logarithm of the original selling price may result in a bell-shaped distribution. On the other hand, the distribution of km_driven is highly skewed, making it unsuitable as a predictor unless some changes are made to this variable. The feature max_power also exhibits some skewness, as we suspected in the previous section. Furthermore, there is a gap in mileage, indicating some outliers in the distribution."
+    "Distribution Plot (Histogram) is useful to see how continues label and features are distributed. also we can find any deviation from a normal distribution e.g. outliers, unusual observation, skewness or kurtosis can be found from these plots, furthermore we can use these plots to find the appropriate measure for imputing missing data. however outlier detection and imputation will be done in the preprecessing phase.  "
    ]
   },
   {
@@ -2193,7 +2245,7 @@
     "sample = np.array([[148, 13.15, 5]])\n",
     "yhat = np.exp(grid.predict(sample))\n",
     "yhat\n",
-    "# (2,514,874) this could be reasonable (the unit couldn't be Dollar), in the data price of a lexus is arount 5 million."
+    "# this could be reasonable (the unit couldn't be Dollar), in the data price of a lexus is arount 5 million."
    ]
   },
   {
